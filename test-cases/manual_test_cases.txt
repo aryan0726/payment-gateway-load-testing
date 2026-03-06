@@ -1,0 +1,27 @@
+TC01 - Valid Payment Creation
+Input: amount=500, userId=101
+Expected Result: Payment created successfully with status SUCCESS
+
+TC02 - Zero Amount Payment
+Input: amount=0, userId=101
+Expected Result: Error - Invalid amount
+
+TC03 - Negative Amount Payment
+Input: amount=-100, userId=101
+Expected Result: Error - Invalid amount
+
+TC04 - Valid Payment Status Check
+Input: Valid paymentId
+Expected Result: Payment details returned with correct status
+
+TC05 - Invalid Payment Status Check
+Input: Random paymentId
+Expected Result: Error - Payment not found
+
+TC06 - Valid Refund
+Input: Valid paymentId (status SUCCESS)
+Expected Result: Status updated to REFUNDED
+
+TC07 - Duplicate Refund Attempt
+Input: Same paymentId again
+Expected Result: Error - Refund not allowed
